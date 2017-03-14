@@ -6,6 +6,7 @@ JOIN the Rocket.Chat web components builder community now!   [CLICK HERE](https:
 
 ## For mobile:
 
+
 ![](https://raw.githubusercontent.com/Sing-Li/bbug/master/images/pwaclientmobile.png)
 
 ## And desktop:
