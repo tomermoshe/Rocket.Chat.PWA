@@ -21,10 +21,10 @@
       "prefix": "",
       "serviceWorker": true,
       "styles": [
-        "theme/variables.scss",
         "styles.scss",
         "assets/offline/offline-language-english.css",
-        "assets/offline/offline-theme-dark.css"
+        "assets/offline/offline-theme-dark.css",
+        "../node_modules/@angular/material/prebuilt-themes/indigo-pink.css"
       ],
       "scripts": [
         "assets/offline/offline.min.js"

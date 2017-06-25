@@ -1,6 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { APP_INITIALIZER, NgModule } from '@angular/core';
-import { IonicApp } from 'ionic-angular';
 
 import { AppComponent } from './app.component';
 import { AppRouting } from './app.routing';
@@ -43,7 +42,7 @@ export function initializer(auth: AuthenticationService): () => Promise<any> {
       deps: [AuthenticationService]
     }
   ],
-  bootstrap: [IonicApp]
+  bootstrap: [AppComponent]
 })
 export class AppModule {
 }

@@ -1,30 +1,34 @@
 <div class="login-page">
   <img padding class="login-logo hide-on-keyboard" src="./assets/images/rocketchat.logo.svg" alt="logo">
-  <ion-card class="login-card" center *ngIf="!showSpinner; else spinner">
-    <ion-row class="login-buttons">
-      <a class="google-login" ion-button href="{{getServiceUrl('google')}}">
-        <ion-icon class="service-login-icon" name="logo-google"></ion-icon>
+  <md-card class="login-card" *ngIf="!showSpinner; else spinner">
+    <span class="login-buttons">
+      <a class="google-login" md-button href="{{getServiceUrl('google')}}">
+        <!--<ion-icon class="service-login-icon" name="logo-google"></ion-icon>-->
       </a>
-    </ion-row>
+    </span>
 
-    <ion-item>
-      <ion-label floating>Username</ion-label>
-      <ion-input type="text" [(ngModel)]="model.username" required></ion-input>
-    </ion-item>
+    <div>
+      <div>Username</div>
+      <md-input-container>
+        <input mdInput [(ngModel)]="model.username" placeholder="username">
+      </md-input-container>
+    </div>
 
-    <ion-item>
-      <ion-label floating>Password</ion-label>
-      <ion-input type="password" [(ngModel)]="model.password" required></ion-input>
-    </ion-item>
+    <div>
+      <div>Password</div>
+      <md-input-container>
+        <input mdInput [(ngModel)]="model.password" placeholder="password">
+      </md-input-container>
+    </div>
 
-    <ion-row class="login-buttons">
-      <button ion-button (click)="login()">
-        <ion-spinner name="bubbles" color="white" *ngIf="loading; else btnText"></ion-spinner>
+    <span class="login-buttons">
+      <button md-button (click)="login()">
+        <md-spinner *ngIf="loading; else btnText"></md-spinner>
         <ng-template #btnText>Login</ng-template>
       </button>
-    </ion-row>
-  </ion-card>
+    </span>
+  </md-card>
   <ng-template #spinner>
-    <ion-spinner class="oauth-spinner"></ion-spinner>
+    <md-spinner class="oauth-spinner"></md-spinner>
   </ng-template>
 </div>

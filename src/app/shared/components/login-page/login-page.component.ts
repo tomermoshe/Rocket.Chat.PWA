@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { AuthenticationService } from '../../services/authentication.service';
-import { ToastController } from 'ionic-angular';
 import { LoginPageService } from '../../services/login-page.service';
 import { environment } from '../../../../environments/environment';
 
@@ -20,7 +19,6 @@ export class LoginPageComponent implements OnInit {
   constructor(private route: ActivatedRoute,
               private router: Router,
               private authenticationService: AuthenticationService,
-              private toastCtrl: ToastController,
               private loginService: LoginPageService) {
   }
 
@@ -80,11 +78,11 @@ export class LoginPageComponent implements OnInit {
   }
 
   showToast(message: string, duration: number = 5000) {
-    const toast = this.toastCtrl.create({
-      message,
-      duration,
-      showCloseButton: true,
-    });
-    toast.present();
+    // const toast = this.toastCtrl.create({
+    //   message,
+    //   duration,
+    //   showCloseButton: true,
+    // });
+    // toast.present();
   }
 }
